@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqt4fl673ufcu"]
+
+[ext_resource type="Script" path="res://Scripts/Chest.gd" id="1_cdcu5"]
+[ext_resource type="Texture2D" uid="uid://7qc67pkaxwfk" path="res://mystic_woods_2.1/sprites/objects/chest_02.png" id="2_7i7fb"]
+[ext_resource type="AudioStream" uid="uid://c0xpn08kk4yu4" path="res://kenney_rpg-audio/Audio/doorOpen_1.ogg" id="4_c22fn"]
+[ext_resource type="Texture2D" uid="uid://ikaqdyco8vuw" path="res://Art/coin_red.png" id="4_x5cf3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfx5t"]
+radius = 19.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oal0l"]
+size = Vector2(14, 5)
+
+[node name="Chest" type="StaticBody2D"]
+script = ExtResource("1_cdcu5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_pfx5t")
+
+[node name="opened" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -6)
+texture = ExtResource("2_7i7fb")
+region_enabled = true
+region_rect = Rect2(33, 2, 14, 13)
+
+[node name="closed" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -6)
+texture = ExtResource("2_7i7fb")
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_oal0l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_c22fn")
+volume_db = -20.0
+
+[node name="inside object" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -11)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_x5cf3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

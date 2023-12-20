@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://tiuw4hmwe8sy"]
+
+[ext_resource type="Script" path="res://Scripts/bosskey.gd" id="1_gpl8s"]
+[ext_resource type="Texture2D" uid="uid://b7a3io21h2luw" path="res://mystic_woods_2.1/sprites/objects/objects.png" id="2_kynfp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xnsl"]
+
+[node name="BossKey" type="Area2D"]
+script = ExtResource("1_gpl8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5xnsl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_kynfp")
+region_enabled = true
+region_rect = Rect2(113, 4, 14, 11)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmxvyotgdajci"]
+
+[ext_resource type="Script" path="res://Scripts/vasepuzzle.gd" id="1_0p8y1"]
+[ext_resource type="PackedScene" uid="uid://b82yql0750tx1" path="res://Scenes/Interactables/coin.tscn" id="2_vyheq"]
+[ext_resource type="Texture2D" uid="uid://1rluqy3s4g1c" path="res://mystic_woods_2.1/sprites/characters/slime.png" id="3_p0oj3"]
+[ext_resource type="Texture2D" uid="uid://dqljm2ig4e2xu" path="res://mystic_woods_2.1/sprites/objects/vase.png" id="4_n7fvg"]
+[ext_resource type="AudioStream" uid="uid://cswo6eubv7w2f" path="res://Sounds/vase.wav" id="5_ipdmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emlfx"]
+atlas = ExtResource("3_p0oj3")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2lva"]
+atlas = ExtResource("3_p0oj3")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfabq"]
+atlas = ExtResource("3_p0oj3")
+region = Rect2(128, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6fwu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emlfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2lva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfabq")
+}],
+"loop": false,
+"name": &"break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_n7fvg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hfodk"]
+radius = 2.0
+height = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0rdei"]
+radius = 15.1327
+
+[node name="VasePuzzle" type="StaticBody2D"]
+script = ExtResource("1_0p8y1")
+coiny = ExtResource("2_vyheq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_6fwu0")
+autoplay = "default"
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hfodk")
+
+[node name="DamageBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_0rdei")
+
+[node name="VaseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ipdmj")
+volume_db = -10.0
+
+[connection signal="body_entered" from="DamageBox" to="." method="_on_damage_box_body_entered"]
+[connection signal="body_exited" from="DamageBox" to="." method="_on_damage_box_body_exited"]

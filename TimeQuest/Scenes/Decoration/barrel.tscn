@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb6x5w30ke1od"]
+
+[ext_resource type="Texture2D" uid="uid://b7a3io21h2luw" path="res://mystic_woods_2.1/sprites/objects/objects.png" id="1_5sabo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bw8d"]
+size = Vector2(12, 4)
+
+[node name="Barrel" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -7)
+texture = ExtResource("1_5sabo")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_3bw8d")

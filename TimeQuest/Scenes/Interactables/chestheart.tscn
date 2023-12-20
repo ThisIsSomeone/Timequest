@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://8r7o0orxnuv6"]
+
+[ext_resource type="PackedScene" uid="uid://bqt4fl673ufcu" path="res://Scenes/Interactables/Chest.tscn" id="1_wscwf"]
+[ext_resource type="Script" path="res://Scripts/chestheart.gd" id="2_l1fig"]
+[ext_resource type="Texture2D" uid="uid://b7a3io21h2luw" path="res://mystic_woods_2.1/sprites/objects/objects.png" id="2_wjg80"]
+
+[node name="Chest" instance=ExtResource("1_wscwf")]
+script = ExtResource("2_l1fig")
+
+[node name="inside object" parent="." index="5"]
+texture = ExtResource("2_wjg80")
+region_enabled = true
+region_rect = Rect2(132, 41, 7, 6)

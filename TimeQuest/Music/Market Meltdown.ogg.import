@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dharjyrx2yxcg"
+path="res://.godot/imported/Market Meltdown.ogg-a70cb49811d69a48e8e991f5ada843d3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Market Meltdown.ogg"
+dest_files=["res://.godot/imported/Market Meltdown.ogg-a70cb49811d69a48e8e991f5ada843d3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

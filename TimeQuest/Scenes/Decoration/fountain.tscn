@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqad56kiomxgr"]
+
+[ext_resource type="Texture2D" uid="uid://7nyge2qkjouf" path="res://DungeonAssetPack/Tiles/tile_0019.png" id="1_3fu4q"]
+[ext_resource type="Texture2D" uid="uid://cttia3ke5e5d0" path="res://DungeonAssetPack/Tiles/tile_0031.png" id="2_27u1x"]
+[ext_resource type="Texture2D" uid="uid://8bs24uvtsb6i" path="res://DungeonAssetPack/Tiles/tile_0020.png" id="2_kcgp7"]
+[ext_resource type="Texture2D" uid="uid://bwic1vqjgg8w1" path="res://DungeonAssetPack/Tiles/tile_0032.png" id="3_k5wgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y1hl"]
+size = Vector2(16, 29)
+
+[node name="fountain" type="Node2D"]
+
+[node name="topoff" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -8)
+texture = ExtResource("1_3fu4q")
+
+[node name="topon" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -8)
+texture = ExtResource("2_kcgp7")
+
+[node name="bottomoff" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 8)
+texture = ExtResource("2_27u1x")
+
+[node name="bottomon" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, 8)
+texture = ExtResource("3_k5wgt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_3y1hl")

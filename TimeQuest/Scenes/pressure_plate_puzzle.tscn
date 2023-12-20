@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct21ojaavsgtc"]
+
+[ext_resource type="PackedScene" uid="uid://srbvohtj0e2k" path="res://Scenes/Interactables/PressurePlateForPuzzle.tscn" id="1_1u7pm"]
+[ext_resource type="Script" path="res://Scenes/pressure_plate_puzzle.gd" id="1_rbu2g"]
+
+[node name="Pressure Plate Puzzle" type="Node2D"]
+script = ExtResource("1_rbu2g")
+
+[node name="PressurePlatePuzzel" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(0, 8)
+
+[node name="PressurePlatePuzzel2" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(32, 8)
+
+[node name="PressurePlatePuzzel3" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(64, 8)
+
+[node name="PressurePlatePuzzel4" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(96, 8)
+
+[node name="PressurePlatePuzzel5" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(128, 8)
+
+[node name="PressurePlatePuzzel6" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(0, 40)
+
+[node name="PressurePlatePuzzel7" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(32, 40)
+
+[node name="PressurePlatePuzzel8" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(64, 40)
+
+[node name="PressurePlatePuzzel9" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(96, 40)
+
+[node name="PressurePlatePuzzel10" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(128, 40)
+
+[node name="PressurePlatePuzzel11" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(0, 72)
+
+[node name="PressurePlatePuzzel12" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(32, 72)
+
+[node name="PressurePlatePuzzel13" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(64, 72)
+
+[node name="PressurePlatePuzzel14" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(96, 72)
+
+[node name="PressurePlatePuzzel15" parent="." instance=ExtResource("1_1u7pm")]
+position = Vector2(128, 72)
+
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel" to="." method="_on_pressure_plate_puzzel_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel" to="." method="_on_pressure_plate_puzzel_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel2" to="." method="_on_pressure_plate_puzzel_2_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel2" to="." method="_on_pressure_plate_puzzel_2_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel3" to="." method="_on_pressure_plate_puzzel_3_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel3" to="." method="_on_pressure_plate_puzzel_3_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel4" to="." method="_on_pressure_plate_puzzel_4_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel4" to="." method="_on_pressure_plate_puzzel_4_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel5" to="." method="_on_pressure_plate_puzzel_5_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel5" to="." method="_on_pressure_plate_puzzel_5_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel6" to="." method="_on_pressure_plate_puzzel_6_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel6" to="." method="_on_pressure_plate_puzzel_6_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel7" to="." method="_on_pressure_plate_puzzel_7_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel7" to="." method="_on_pressure_plate_puzzel_7_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel8" to="." method="_on_pressure_plate_puzzel_8_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel8" to="." method="_on_pressure_plate_puzzel_8_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel9" to="." method="_on_pressure_plate_puzzel_9_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel9" to="." method="_on_pressure_plate_puzzel_9_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel10" to="." method="_on_pressure_plate_puzzel_10_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel10" to="." method="_on_pressure_plate_puzzel_10_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel11" to="." method="_on_pressure_plate_puzzel_11_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel11" to="." method="_on_pressure_plate_puzzel_11_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel12" to="." method="_on_pressure_plate_puzzel_12_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel12" to="." method="_on_pressure_plate_puzzel_12_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel13" to="." method="_on_pressure_plate_puzzel_13_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel13" to="." method="_on_pressure_plate_puzzel_13_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel14" to="." method="_on_pressure_plate_puzzel_14_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel14" to="." method="_on_pressure_plate_puzzel_14_pressure_plate_on"]
+[connection signal="pressurePlateOff" from="PressurePlatePuzzel15" to="." method="_on_pressure_plate_puzzel_15_pressure_plate_off"]
+[connection signal="pressurePlateOn" from="PressurePlatePuzzel15" to="." method="_on_pressure_plate_puzzel_15_pressure_plate_on"]

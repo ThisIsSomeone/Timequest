@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://p5opq1wp42og"
+path="res://.godot/imported/Panic in the Aisles.ogg-0c6c8f2dac5f3cc994ffe883671d2544.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Panic in the Aisles.ogg"
+dest_files=["res://.godot/imported/Panic in the Aisles.ogg-0c6c8f2dac5f3cc994ffe883671d2544.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

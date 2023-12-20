@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpw7xbcbl8egg"]
+
+[ext_resource type="Texture2D" uid="uid://b7a3io21h2luw" path="res://mystic_woods_2.1/sprites/objects/objects.png" id="1_5o413"]
+[ext_resource type="Script" path="res://Scripts/sign.gd" id="1_orm4i"]
+[ext_resource type="FontFile" uid="uid://chgd6rpq5kgds" path="res://Art/Fonts/DungeonFont.ttf" id="3_4bkj4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cmn3q"]
+radius = 15.0083
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pcyi"]
+size = Vector2(14, 3)
+
+[node name="Sign" type="StaticBody2D"]
+script = ExtResource("1_orm4i")
+
+[node name="interactzone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactzone"]
+position = Vector2(0, -6.5)
+shape = SubResource("CircleShape2D_cmn3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -6)
+texture = ExtResource("1_5o413")
+offset = Vector2(0, 0.5)
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 13)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_0pcyi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+z_index = 10
+texture_filter = 1
+offset_left = -47.0
+offset_top = -27.0
+offset_right = 143.0
+offset_bottom = 81.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("3_4bkj4")
+theme_override_fonts/bold_font = ExtResource("3_4bkj4")
+theme_override_fonts/italics_font = ExtResource("3_4bkj4")
+theme_override_fonts/bold_italics_font = ExtResource("3_4bkj4")
+theme_override_fonts/mono_font = ExtResource("3_4bkj4")
+bbcode_enabled = true
+text = "[center][/center]"
+
+[connection signal="body_entered" from="interactzone" to="." method="_on_interactzone_body_entered"]
+[connection signal="body_exited" from="interactzone" to="." method="_on_interactzone_body_exited"]

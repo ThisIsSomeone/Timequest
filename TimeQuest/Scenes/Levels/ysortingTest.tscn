@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdw1d5j6n60ye"]
+
+[ext_resource type="PackedScene" uid="uid://pjrnm3lr6y14" path="res://Scenes/Characters/PlayerController.tscn" id="3_kwcc1"]
+[ext_resource type="PackedScene" uid="uid://bjcbxu2hxft34" path="res://Scenes/tile_map.tscn" id="3_p2alr"]
+[ext_resource type="PackedScene" uid="uid://dpw7xbcbl8egg" path="res://Scenes/Interactables/sign.tscn" id="13_ho6x4"]
+
+[node name="Prototype" type="Node2D"]
+y_sort_enabled = true
+metadata/_edit_horizontal_guides_ = []
+
+[node name="Sign" parent="." instance=ExtResource("13_ho6x4")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(215, -66)
+sign_txt = "[center]test[/center]"
+textduration = 3
+
+[node name="PlayerController" parent="." instance=ExtResource("3_kwcc1")]
+position = Vector2(163, -73)
+
+[node name="TileMap" parent="." instance=ExtResource("3_p2alr")]
+layer_0/name = "normal"
+layer_1/name = "y-sorting"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(393217, 131073, 2, 393218, 131073, 2, 393219, 131073, 2, 393220, 131073, 2, 393221, 131073, 2, 393222, 131073, 2, -196607, 131073, 0, -196606, 131073, 0, -196605, 131073, 0, -196604, 131073, 0, -196603, 131073, 0, -196602, 131073, 0)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgr8j752sipoc"
+path="res://.godot/imported/Trip to the Market.ogg-b5c6ee4ae4f023995486bc9bb8a7bb26.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/Trip to the Market.ogg"
+dest_files=["res://.godot/imported/Trip to the Market.ogg-b5c6ee4ae4f023995486bc9bb8a7bb26.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

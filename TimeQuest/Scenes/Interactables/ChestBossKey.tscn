@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bk1xtdf8f1rv"]
+
+[ext_resource type="Script" path="res://Scripts/ChestBossKey.gd" id="1_j4p81"]
+[ext_resource type="Texture2D" uid="uid://7qc67pkaxwfk" path="res://mystic_woods_2.1/sprites/objects/chest_02.png" id="2_7kxtm"]
+[ext_resource type="AudioStream" uid="uid://c0xpn08kk4yu4" path="res://kenney_rpg-audio/Audio/doorOpen_1.ogg" id="3_8ivbj"]
+[ext_resource type="Texture2D" uid="uid://b7a3io21h2luw" path="res://mystic_woods_2.1/sprites/objects/objects.png" id="4_lewj4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfx5t"]
+radius = 15.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oal0l"]
+size = Vector2(14, 5)
+
+[node name="ChestBosskey" type="StaticBody2D"]
+script = ExtResource("1_j4p81")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_pfx5t")
+
+[node name="opened" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -5)
+texture = ExtResource("2_7kxtm")
+region_enabled = true
+region_rect = Rect2(33, 2, 14, 13)
+
+[node name="closed" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -5)
+texture = ExtResource("2_7kxtm")
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_oal0l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8ivbj")
+volume_db = -20.0
+
+[node name="inside object" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -11)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_lewj4")
+region_enabled = true
+region_rect = Rect2(113, 4, 14, 11)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

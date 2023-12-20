@@ -1,0 +1,348 @@
+[gd_scene load_steps=4 format=3 uid="uid://bknfkiwvyscoj"]
+
+[ext_resource type="Script" path="res://Scripts/vase_puzzle.gd" id="1_3px7s"]
+[ext_resource type="PackedScene" uid="uid://b8vshwqla1c1o" path="res://Scenes/Interactables/half_heart.tscn" id="2_b3jq4"]
+[ext_resource type="PackedScene" uid="uid://bmxvyotgdajci" path="res://Scenes/Interactables/vaseforpuzzles.tscn" id="2_q4ogb"]
+
+[node name="vase_puzzle" type="Node2D"]
+modulate = Color(0.976471, 0.976471, 0.976471, 1)
+script = ExtResource("1_3px7s")
+howmanytobreak = 65
+
+[node name="VasePuzzleHeart7" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(48, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart8" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(160, 96)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle9" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(192, 96)
+
+[node name="VasePuzzle" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-32, 0)
+
+[node name="VasePuzzle2" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.976471, 0.976471, 0.976471, 1)
+y_sort_enabled = true
+position = Vector2(0, 32)
+
+[node name="VasePuzzleHeart" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-48, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart2" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-16, 32)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle3" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(192, 0)
+
+[node name="VasePuzzle4" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-16, 64)
+
+[node name="VasePuzzleHeart3" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(16, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart4" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-48, 32)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle5" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.976471, 0.976471, 0.976471, 1)
+y_sort_enabled = true
+
+[node name="VasePuzzle6" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(32, 0)
+
+[node name="VasePuzzleHeart5" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-16, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart6" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(208, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle7" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(48, 64)
+
+[node name="VasePuzzle24" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(112, 0)
+
+[node name="VasePuzzleHeart34" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(112, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle25" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(144, 0)
+
+[node name="VasePuzzleHeart35" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(80, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart36" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(160, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle26" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(176, 0)
+
+[node name="VasePuzzleHeart37" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(96, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle27" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(16, 32)
+
+[node name="VasePuzzle28" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.913725, 0.713726, 0.796078, 1)
+y_sort_enabled = true
+position = Vector2(32, 32)
+
+[node name="VasePuzzle10" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-32, 64)
+
+[node name="VasePuzzleHeart9" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-32, 96)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart10" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.878431, 0.74902, 0.501961, 1)
+y_sort_enabled = true
+position = Vector2(128, 0)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle11" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-48, 96)
+
+[node name="VasePuzzle12" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(144, 128)
+
+[node name="VasePuzzleHeart11" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-48, 64)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart12" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.878431, 0.74902, 0.501961, 1)
+y_sort_enabled = true
+position = Vector2(32, 64)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle13" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(80, 128)
+
+[node name="VasePuzzle14" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(16, 96)
+
+[node name="VasePuzzleHeart13" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.976471, 0.976471, 0.976471, 1)
+y_sort_enabled = true
+position = Vector2(0, 64)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart14" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(0, 96)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle15" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(16, 64)
+
+[node name="VasePuzzle16" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.505882, 0.741176, 0.443137, 1)
+y_sort_enabled = true
+position = Vector2(-16, 128)
+
+[node name="VasePuzzleHeart15" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.878431, 0.74902, 0.501961, 1)
+y_sort_enabled = true
+position = Vector2(32, 96)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart17" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(-32, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart18" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.878431, 0.74902, 0.501961, 1)
+y_sort_enabled = true
+position = Vector2(64, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle17" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(-48, 128)
+
+[node name="VasePuzzleHeart19" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.878431, 0.74902, 0.501961, 1)
+y_sort_enabled = true
+position = Vector2(48, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle18" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(16, 128)
+
+[node name="VasePuzzleHeart20" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(0, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle19" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(-16, 96)
+
+[node name="VasePuzzleHeart21" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.878431, 0.74902, 0.501961, 1)
+y_sort_enabled = true
+position = Vector2(32, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart22" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(208, 112)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart23" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(192, 112)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle20" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(160, 112)
+
+[node name="VasePuzzleHeart24" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(176, 112)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart25" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(208, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart26" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(192, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle21" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(160, 128)
+
+[node name="VasePuzzleHeart27" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(176, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart28" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(208, 80)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart29" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(192, 80)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle22" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(176, 96)
+
+[node name="VasePuzzleHeart30" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(176, 80)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart31" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(208, 96)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart32" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(128, 128)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzle23" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(160, 80)
+
+[node name="VasePuzzleHeart33" parent="." instance=ExtResource("2_q4ogb")]
+modulate = Color(0.654902, 0.486275, 0.764706, 1)
+y_sort_enabled = true
+position = Vector2(-32, 32)
+coiny = ExtResource("2_b3jq4")
+
+[node name="VasePuzzleHeart16" parent="." instance=ExtResource("2_q4ogb")]
+y_sort_enabled = true
+position = Vector2(64, 0)
+coiny = ExtResource("2_b3jq4")

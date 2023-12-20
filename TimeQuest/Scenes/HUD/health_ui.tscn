@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://bv7u724522viy"]
+
+[ext_resource type="Script" path="res://Scripts/health_ui.gd" id="1_c6b8e"]
+[ext_resource type="Texture2D" uid="uid://cs4od4ed5g5s0" path="res://Art/HeartSprites/HeartSprite-1.png.png" id="2_issj1"]
+[ext_resource type="Texture2D" uid="uid://dxuttvgpy7fsv" path="res://Art/HeartSprites/HeartSprite-3.png.png" id="2_jccx0"]
+[ext_resource type="Texture2D" uid="uid://qv30qdlo0ax5" path="res://Art/HeartSprites/HeartSprite-2.png (1).png" id="3_5occ5"]
+[ext_resource type="PackedScene" uid="uid://dmy7jgifsg80s" path="res://Scenes/HUD/heartTextureRect.tscn" id="5_fnk2a"]
+
+[node name="HealthUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 104.0
+offset_bottom = 40.0
+size_flags_horizontal = 8
+script = ExtResource("1_c6b8e")
+HeartFullTexture = ExtResource("2_issj1")
+HeartHalfTexture = ExtResource("3_5occ5")
+HeartEmptyTexture = ExtResource("2_jccx0")
+HeartScene = ExtResource("5_fnk2a")

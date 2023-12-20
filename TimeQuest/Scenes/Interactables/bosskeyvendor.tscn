@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb0ds7ialciyr"]
+
+[ext_resource type="PackedScene" uid="uid://dpw7xbcbl8egg" path="res://Scenes/Interactables/sign.tscn" id="1_og241"]
+[ext_resource type="Script" path="res://Scripts/bosskeyvendor.gd" id="2_ek8wc"]
+[ext_resource type="Texture2D" uid="uid://drl0w7hu4l5r2" path="res://DungeonAssetPack/Tiles/tile_0097.png" id="3_7wgly"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyfm1"]
+size = Vector2(14, 5)
+
+[node name="Vendor" instance=ExtResource("1_og241")]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("2_ek8wc")
+sign_txt = "[center]Hmpf, you are here to challenge the [color=purple]Necrolancer[/color] as well?[/center]"
+sign_txt2 = "[center]Very well, I shall give you this [color=red]Boss Key[/color] that I found for 50 potions[/center]"
+sign_txt3 = "[center]Now pay up, or leave me be![/center]"
+textduration = 3
+textduration2 = 3
+textduration3 = 3
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -7)
+texture = ExtResource("3_7wgly")
+region_enabled = false
+
+[node name="CollisionShape2D2" parent="." index="2"]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_pyfm1")

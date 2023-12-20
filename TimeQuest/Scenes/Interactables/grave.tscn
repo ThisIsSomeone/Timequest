@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://opyavo7ghvhr"]
+
+[ext_resource type="PackedScene" uid="uid://dpw7xbcbl8egg" path="res://Scenes/Interactables/sign.tscn" id="1_fsbxp"]
+[ext_resource type="Script" path="res://Scripts/grave.gd" id="2_qsxjb"]
+[ext_resource type="Texture2D" uid="uid://b3xs4y3i6tyol" path="res://DungeonAssetPack/Tiles/tile_0065.png" id="3_w1u5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyfm1"]
+size = Vector2(14, 5)
+
+[node name="Grave" instance=ExtResource("1_fsbxp")]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("2_qsxjb")
+sign_txt = "todo"
+textduration = 0
+whichartifact = 0
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -7)
+texture = ExtResource("3_w1u5r")
+region_enabled = false
+
+[node name="CollisionShape2D2" parent="." index="2"]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_pyfm1")
+
+[connection signal="isdone" from="." to="." method="_on_isdone"]

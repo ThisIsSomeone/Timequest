@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbsa6tt5grydo"]
+
+[ext_resource type="PackedScene" uid="uid://dpw7xbcbl8egg" path="res://Scenes/Interactables/sign.tscn" id="1_wgmbl"]
+[ext_resource type="Script" path="res://Scripts/npc.gd" id="2_pq3wu"]
+[ext_resource type="Texture2D" uid="uid://loexq163sopc" path="res://DungeonAssetPack/Tiles/tile_0111.png" id="3_shat8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyfm1"]
+size = Vector2(14, 5)
+
+[node name="NPC" instance=ExtResource("1_wgmbl")]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("2_pq3wu")
+sign_txt2 = ""
+sign_txt3 = ""
+textduration2 = 2
+textduration3 = 2
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -7)
+texture = ExtResource("3_shat8")
+region_enabled = false
+
+[node name="CollisionShape2D2" parent="." index="2"]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_pyfm1")

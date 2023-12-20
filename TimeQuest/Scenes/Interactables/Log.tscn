@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://ciml78t4t07vd"]
+
+[ext_resource type="Script" path="res://Scripts/Log.gd" id="1_s0gi0"]
+[ext_resource type="Texture2D" uid="uid://bd6o7rp2l3yyj" path="res://mystic_woods_2.1/sprites/log.png" id="1_wm8bd"]
+[ext_resource type="Texture2D" uid="uid://c3umymkybrsa8" path="res://mystic_woods_2.1/sprites/rollinglog.png" id="2_c3025"]
+[ext_resource type="Texture2D" uid="uid://1rluqy3s4g1c" path="res://mystic_woods_2.1/sprites/characters/slime.png" id="2_pljbb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gygyt"]
+atlas = ExtResource("2_pljbb")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udii4"]
+atlas = ExtResource("2_pljbb")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skql1"]
+atlas = ExtResource("2_pljbb")
+region = Rect2(128, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4w8if"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gygyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udii4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skql1")
+}],
+"loop": false,
+"name": &"break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wm8bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c3025")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e210w"]
+radius = 3.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwahh"]
+radius = 3.0
+
+[node name="Log" type="Area2D"]
+y_sort_enabled = true
+script = ExtResource("1_s0gi0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_4w8if")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_e210w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wwahh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

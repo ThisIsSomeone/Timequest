@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqt4fl673ufcu"]
+
+[ext_resource type="Texture2D" uid="uid://de22wrqi4nrvk" path="res://DungeonAssetPack/Tiles/tile_0091.png" id="1_218sm"]
+[ext_resource type="Script" path="res://Scenes/Chest.gd" id="1_gofwk"]
+[ext_resource type="Texture2D" uid="uid://4nyaittgqkdy" path="res://DungeonAssetPack/Tiles/tile_0089.png" id="2_55ces"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfx5t"]
+radius = 15.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oal0l"]
+size = Vector2(16, 16)
+
+[node name="Chest" type="StaticBody2D"]
+script = ExtResource("1_gofwk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pfx5t")
+
+[node name="opened" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_218sm")
+region_enabled = true
+region_rect = Rect2(1, 1, 14, 15)
+
+[node name="closed" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_55ces")
+region_enabled = true
+region_rect = Rect2(1, 3, 14, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oal0l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

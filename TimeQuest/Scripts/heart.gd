@@ -1,0 +1,7 @@
+extends StaticBody2D
+
+func _on_area_2d_body_entered(_body):
+	if _body.name == "PlayerController":
+		_body.restore_heart()
+		_body.restore_heart()
+		self.queue_free()

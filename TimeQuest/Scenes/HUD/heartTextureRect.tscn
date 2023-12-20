@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmy7jgifsg80s"]
+
+[ext_resource type="Texture2D" uid="uid://dxuttvgpy7fsv" path="res://Art/HeartSprites/HeartSprite-3.png.png" id="1_y8lr1"]
+
+[node name="Heart1" type="TextureRect"]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_y8lr1")

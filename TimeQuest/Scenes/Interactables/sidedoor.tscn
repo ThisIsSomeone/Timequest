@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcrxcfivcr6j5"]
+
+[ext_resource type="Script" path="res://Scripts/door.gd" id="1_jdjil"]
+[ext_resource type="Texture2D" uid="uid://b0qswdrhvsvsn" path="res://Art/DoorSprites/door-open-side.png" id="2_ar82r"]
+[ext_resource type="Texture2D" uid="uid://c666b0ww0k1xi" path="res://Art/DoorSprites/door-closed-side.png" id="2_faqyf"]
+[ext_resource type="AudioStream" uid="uid://c4jo5bbbhy2a5" path="res://Sounds/doors.mp3" id="4_kfebx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3j76"]
+size = Vector2(5, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_03ei0"]
+radius = 12.0
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_jdjil")
+
+[node name="ClosedBlock" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_l3j76")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_03ei0")
+
+[node name="closed" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.5, 0)
+scale = Vector2(1.05, 1)
+texture = ExtResource("2_faqyf")
+
+[node name="opened" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0.5, 0)
+scale = Vector2(1.05, 1)
+texture = ExtResource("2_ar82r")
+region_rect = Rect2(0, -3, 21, 23)
+
+[node name="AudioDoor" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kfebx")
+volume_db = 5.314
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b26m278me50en"]
+
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="1_5ck3q"]
+[ext_resource type="Texture2D" uid="uid://b6n8kl6vs8h5a" path="res://DungeonAssetPack/Tiles/tile_0101.png" id="1_fclre"]
+[ext_resource type="AudioStream" uid="uid://cx2illfbg8cw2" path="res://Sounds/button2.mp3" id="3_il11s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pmfdi"]
+radius = 13.0
+
+[node name="Button" type="Node2D"]
+script = ExtResource("1_5ck3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_fclre")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_pmfdi")
+
+[node name="OnSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_il11s")
+volume_db = -10.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

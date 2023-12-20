@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgndtnw0abxhn"]
+
+[ext_resource type="Script" path="res://GameIntro.gd" id="1_8yk5f"]
+[ext_resource type="VideoStream" path="res://Videos/Intro-TimeQuest.ogv" id="1_os6wg"]
+[ext_resource type="FontFile" uid="uid://chgd6rpq5kgds" path="res://Art/Fonts/DungeonFont.ttf" id="3_d4wkf"]
+
+[node name="Intro" type="Camera2D"]
+script = ExtResource("1_8yk5f")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2(43, 0)
+scale = Vector2(0.3, 0.3)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer"]
+offset_right = 1280.0
+offset_bottom = 720.0
+scale = Vector2(0.9, 0.9)
+stream = ExtResource("1_os6wg")
+volume_db = 15.0
+autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 960.0
+offset_top = 576.0
+offset_right = 1216.0
+offset_bottom = 688.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("3_d4wkf")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]Pause = Z
+Skip = C"
+
+[node name="pausetext" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
+texture_filter = 1
+offset_top = 104.0
+offset_right = 1152.0
+offset_bottom = 752.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("3_d4wkf")
+theme_override_font_sizes/normal_font_size = 75
+bbcode_enabled = true
+text = "[center]
+
+
+Paused"
+
+[connection signal="finished" from="CanvasLayer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgqmt1578i4bc"]
+
+[ext_resource type="Script" path="res://Scripts/respawner.gd" id="1_i687j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xv7en"]
+radius = 64.0
+
+[node name="Respawner" type="Area2D"]
+script = ExtResource("1_i687j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xv7en")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
